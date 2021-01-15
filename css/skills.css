@@ -1,0 +1,136 @@
+.skill-box {
+  width: 90%;
+  margin: auto;
+
+  margin: 40px auto;
+  padding: 0;
+}
+
+.skill-box .skill-label {
+  display: flex;
+  border: 2px solid #3cb57a;
+  cursor: pointer;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.skill-label .percentage-bar {
+  background-color: #3cb57a;
+  opacity: 0.45;
+  transition: 0.9s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1.2px;
+  color: #000;
+}
+
+#f1 {
+  width: 86%;
+  flex: 86%;
+}
+#f2 {
+  width: 14%;
+  flex: 14%;
+}
+
+#b1 {
+  width: 85%;
+  flex: 85%;
+}
+
+#b2 {
+  width: 15%;
+  flex: 15%;
+}
+
+#u1 {
+  width: 75%;
+  flex: 75%;
+}
+#u2 {
+  width: 25%;
+  flex: 25%;
+}
+
+.skill-label .percentage-number {
+  position: relative;
+
+  padding: 10px;
+  flex: 14%;
+  padding: 10px;
+  color: #3cb57a;
+}
+
+.skill-label .percentage-number::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-55%);
+  font-size: 1.6em;
+}
+
+.skill-content {
+  position: relative;
+  height: 0;
+  padding: 20px;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.skill-content.active {
+  min-height: 320px;
+  padding: 20px;
+  border: 1px solid black;
+  transition: 0.5s ease-in-out;
+}
+
+.skill-content p {
+  margin: 20px auto;
+
+  width: 80%;
+}
+
+.skill-content p progress {
+  color: #3cb57a;
+  width: 90%;
+  transition: 0.8s;
+}
+
+@media only screen and (max-width: 468px) {
+  .skill-content p progress {
+    width: 80%;
+  }
+  .skill-content p {
+    margin: 23px auto;
+
+    width: 100%;
+  }
+  .skill-label .percentage-bar {
+    font-size: 16px;
+  }
+  .skill-label .percentage-number::before {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    transform: translateY(-55%);
+    font-size: 1.1em;
+  }
+}
+
+@media only screen and (max-width: 438px) {
+  .skill-content p progress {
+    width: 75%;
+  }
+  .skill-label {
+    font-size: 12px;
+  }
+
+  .skill-label .percentage-bar {
+    font-size: 10px;
+  }
+}
